@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+  let vatli = prompt("nhap diem vatli ");
+  let hoahoc = prompt("nhap diem hoa hoc");
+  let sinhhoc = prompt("nhap diem sinhhoc");
+  vatli = parseFloat(vatli);
+  hoahoc = parseFloat(hoahoc);
+  sinhhoc = parseFloat(sinhhoc);
+  let diem_trung_binh  = (vatli + hoahoc + sinhhoc) / 3;
+  let tong = vatli + hoahoc + sinhhoc;
+  document.write("diem trung bình = " + diem_trung_binh +"<br/>");
+  document.write("diem tong =" + tong);
+</script>
+</html>
