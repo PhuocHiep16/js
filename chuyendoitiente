@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  button{
+    border: solid 1px brown;
+    border-radius: 5px;
+    background: purple;
+    color:white;
+  }
+  button:hover{
+    color:violet;
+  }
+</style>
+<body>
+  <form action="">
+    <input type="text" placeholder="Amount" id="Amount"><br><br>
+    <label >Form Currency</label><br>
+    <select id="formCurrency">
+      <option value="VietNam">VietNam</option>
+      <option value="America">America</option>
+    </select><br><br>
+    <label>To Currency</label><br>
+    <select  id="toCurrency">
+      <option value="VND">VND</option>
+      <option value="USD">USD</option>
+    </select>
+    <br>
+  </form><br>
+  <button onclick="Convert()">Convert</button>
+  <br>
+  <div id="Result"></div>
+</body>
+<script>
+  function Convert(){
+    let formCurrency = document.getElementById("formCurrency").value;
+    let toCurrency = document.getElementById("toCurrency").value;
+    let Amount = parseFloat(document.getElementById("Amount").value);
+    let Result = 0;
+  if(toCurrency === "VND"){
+    Result = Amount / 23000;
+  }else{
+    Result = Amount * 23000;
+  }
+  document.getElementById("Result").innerHTML = "Result: " + Result;
+}
+</script>
+</html>
