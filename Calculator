@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .buttobn{
+    width: 500px;
+  }
+</style>
+<body>
+    <input id="result" type="text" style=margin-left:23px;width:180px id=calc><br>
+    <div class="button">
+    <input onclick="numberclick('(')" type="button" value="(">
+    <input onclick="numberclick(')')" type="button" value=")">
+    <input onclick="handlephantram()" type="button" value="%">
+    <input onclick="clearScreen()" type="button" value="CE">
+    <br>
+    <input onclick="numberclick('7')" type="button" value="7">
+    <input onclick="numberclick('8')" type="button" value="8">
+    <input onclick="numberclick('9')" type="button" value="9">
+    <input onclick="numberclick('÷')" type="button" style=width:60px; value="÷">
+    <br>
+    <input onclick="numberclick('4')" type="button" value="4">
+    <input onclick="numberclick('5')" type="button" value="5">
+    <input onclick="numberclick('6')" type="button" value="6">
+    <input onclick="numberclick('x')" type="button" style=width:60px; value="x">
+    <br>
+    <input onclick="numberclick('1')" type="button" value="1">
+    <input onclick="numberclick('2')" type="button" value="2">
+    <input onclick="numberclick('3')" type="button" value="3">
+    <input onclick="numberclick('-')" type="button" style=width:60px; value="-">
+    <br>
+    <input onclick="numberclick('0')" type="button" value="0">
+    <input onclick="numberclick('.')" type="button" value=".">
+    <input onclick="solve()" type="button" value="=">
+    <input onclick="numberclick('+')" type="button" style=width:60px;margin-left:3px value="+">
+    </div>  
+
+
+</body>
+<script>
+    function numberclick(val){
+      document.getElementById("result").value += val;
+      return;
+    }
+    function solve(){
+      let x = document.getElementById("result").value;
+      let y = eval(x);
+      document.getElementById('result').value = y;
+      return y;
+    }
+    function clearScreen(){
+      document.getElementById("result").value = "";
+    }
+    function handlephantram(){
+      let a = doccument.getElementById("result").value /= 100;
+      // document.getElementById("result").value = a;
+      return;
+    }
+</script>
+</html>
