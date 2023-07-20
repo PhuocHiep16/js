@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>Do you love me? </h3>
+<input type="button" value="yes" onclick="dongy()" >
+<input type="button" id='btnNo' value="No" onmouseover="noHover()" style="position: absolute; left: 132px; top: 492px;">
+</body>
+<SCRIPT>
+  function dongy(){
+  alert("<3");
+}
+function noHover(){
+  var x = Math.round(Math.random() * window.innerWidth);
+  var y = Math.round(Math.random() * window.innerHeight);
+  document.getElementById('btnNo').style.left = x + 'px';
+  document.getElementById('btnNo').style.top = y + 'px';
+}
+</SCRIPT>
+</html>
