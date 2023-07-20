@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label for="kWh">Nhập số kWh tiêu thụ:</label>
+  <input type="number" id="kWh" />
+  <button onclick="tinhTienDien()">Tính tiền điện</button>
+</body>
+<script>
+  function tinhTienDien(){
+    const gia1 = 1500;
+    const gia2 = 2000;
+    const gia3 = 2500;
+    const gia4 = 3000;
+
+    const kWh = parseFloat(document.getElementById("kWh").value);
+    let tongtien = 0;
+
+    if(kWh <= 50){
+      tongtien = gia1 * kWh ;
+    }else if(kWh <= 100){
+      tongtien = 50 * gia1 + (kWh - 50) * gia2;
+    }else if (kWh <= 200){
+      tongtien = 50 * gia1 + 50 * gia2 +(kWh - 100) * gia3;
+    }else{
+      tongtien = 50 * gia1 + 50 * gia2 + 100 * gia3 + (kWh - 200) * gia4;
+    }
+    alert("tổng tiền điện" + tongtien + "VND");
+  }
+</script>
+</html>
